@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { string, func } from 'prop-types';
 import { Icon, Support } from 'ming-ui';
 import { navigateTo } from 'src/router/navigateTo';
@@ -139,7 +140,7 @@ export default class CreateFlow extends Component {
             />
           </div>
           <div>
-            <Support type={2} text={_l('使用帮助')} href="https://help.mingdao.com/workflow/introduction" />
+            <Support type={2} text={_l('使用帮助')} href={getHelpUrl('workflow', 'introduction')} />
           </div>
         </header>
         <div className="createWorkflowBox">

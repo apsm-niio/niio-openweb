@@ -1,4 +1,5 @@
 import React from 'react';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { Dialog, Icon, Support } from 'ming-ui';
 import sheetAjax from 'src/api/worksheet';
 import cx from 'classnames';
@@ -76,7 +77,7 @@ export default class AliasDialog extends React.Component {
           {_l('字段别名仅允许使用字母（不区分大小写）、数字和下划线组合，且必须以字母开头，不可重复。')}
           <Support
             type={3}
-            href="https://help.mingdao.com/worksheet/field-property/#syestem-field-alias"
+            href={getHelpUrl('worksheet', 'fieldPropertyAlias')}
             text={_l('了解更多')}
           />
         </p>

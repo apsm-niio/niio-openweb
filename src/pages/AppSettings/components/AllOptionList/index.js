@@ -13,6 +13,7 @@ import { getOptions } from '../../../widgetConfig/util/setting';
 import { useSetState } from 'react-use';
 import OperateList from './OperateList';
 import { getTranslateInfo } from 'src/util';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const MAX_HEIGHT = 530;
 const LINE_HEIGHT = 30;
@@ -279,7 +280,7 @@ export default function AllOptionList(props) {
           handleSearch(value);
         }}
         handleAdd={() => setVisible({ createVisible: true })}
-        link="https://help.mingdao.com/worksheet/option-set"
+        link={getHelpUrl('worksheet', 'optionSet')}
       />
       <div className="tabWrap mBottom15">
         {[

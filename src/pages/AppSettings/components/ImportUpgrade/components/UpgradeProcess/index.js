@@ -6,6 +6,7 @@ import UpgradeStatus from '../UpgradeStatus';
 import UpgradeItemWrap from '../UpgradeItemWrap';
 import { UPGARADE_TYPE_LIST, UPGRADE_ERRORMSG, UPGRADE_DETAIL_TYPE_LIST } from '../../../../config';
 import { getCheckedInfo, getViewIcon } from '../../../../util';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { formatFileSize } from 'src/util';
 import appManagementAjax from 'src/api/appManagement';
 import importDisabledImg from 'src/pages/Admin/app/appManagement/img/import_disabled.png';
@@ -375,7 +376,7 @@ export default class UpgradeProcess extends Component {
             : _l('导入单个应用文件，实现对当前应用快速升级。')}
           {IsLocal ? _l('请确认私有部署的版本，高版本向低版本导入，可能会导入失败。') : ''}
           {_l('应用升级需要一段时间，正在升级中的应用将为不可用状态。')}
-          <Support text={_l('帮助')} type={3} href="https://help.mingdao.com/application/upgrade" />
+          <Support text={_l('帮助')} type={3} href={getHelpUrl('application', 'upgrade')} />
         </div>
         {batchUpdate && files.length ? (
           <UpgradeFileList
@@ -884,7 +885,7 @@ export default class UpgradeProcess extends Component {
             </div>
           )}
           <div className="Gray_9d Font14 w110 TxtRight helpIcon">
-            <Support title={_l('帮助')} type={1} href="https://help.mingdao.com/application/upgrade" />
+            <Support title={_l('帮助')} type={1} href={getHelpUrl('application', 'upgrade')} />
           </div>
         </div>
         <div className={cx('upgradeProcessContent', { pBottom68: batchUpdate })}>

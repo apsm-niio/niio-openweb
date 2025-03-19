@@ -26,6 +26,7 @@ import 'src/pages/integration/dataIntegration/connector/style.less';
 import SourceCon from './SourceCon';
 import AddAggregation from './AggregationConForAdd';
 import { getTranslateInfo } from 'src/util';
+import { getHelpUrl } from 'src/common/helpUrls';
 import DocumentTitle from 'react-document-title';
 import { systemControls, GROUPMAX } from '../config';
 import AddGroup from './AddGroup';
@@ -409,7 +410,7 @@ export default function Info(props) {
           <Support
             text={_l('使用帮助')}
             type={2}
-            href="https://help.mingdao.com/application/aggregation"
+            href={getHelpUrl('application', 'aggregation')}
             className="mRight20 Gray_bd"
           />
           {hasChange && flowData.aggTableTaskStatus === 1 && (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { Icon, LoadDiv, Support, UpgradeIcon, SortableList } from 'ming-ui';
 import { Drawer } from 'antd';
 import './print.less';
@@ -284,7 +285,7 @@ class Print extends React.Component {
                   <span className="Font13 Gray_9e">
                     {_l('保存系统打印的配置为模板，或上传 Word、Excel 模板自由定义记录打印的样式。')}
                   </span>
-                  <Support type={3} text={_l('帮助')} href="https://help.mingdao.com/worksheet/print-template" />
+                  <Support type={3} text={_l('帮助')} href={getHelpUrl('worksheet', 'printTemplate')} />
                 </p>
               </div>
               <span className="add Relative bold" onClick={() => this.setState({ showCreatePrintTemp: true })}>

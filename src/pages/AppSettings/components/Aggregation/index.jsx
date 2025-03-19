@@ -7,6 +7,7 @@ import Item from './components/Item';
 import Info from './components/Info';
 import FullScreenCurtain from 'src/pages/workflow/components/FullScreenCurtain/index.jsx';
 import { getFeatureStatus, buriedUpgradeVersionDialog } from 'src/util';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { VersionProductType } from 'src/util/enum';
 import syncTaskApi from 'src/pages/integration/api/syncTask.js';
 import { navigateTo } from 'src/router/navigateTo';
@@ -340,7 +341,7 @@ export default function AggregationTables(props) {
             title={_l('聚合表')}
             addBtnName={_l('新建聚合表')}
             description={_l('可将多个工作表连接，对数据进行归组聚合，在统计中直接使用')}
-            link="https://help.mingdao.com/application/aggregation" //帮助链接
+            link={getHelpUrl('application', 'aggregation')} //帮助链接
             handleSearch={onSearch}
             handleAdd={() => {
               featureType === '2'

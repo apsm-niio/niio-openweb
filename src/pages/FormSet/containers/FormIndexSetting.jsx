@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { Drawer } from 'antd';
 import Trigger from 'rc-trigger';
 import MoreOption from '../components/MoreOption';
@@ -282,7 +283,7 @@ function FormIndexSetting(props) {
                     worksheetRowIndexLimit,
                   )}
                 </span>
-                <Support type={3} text={_l('帮助')} href="https://help.mingdao.com/worksheet/index-acceleration" />
+                <Support type={3} text={_l('帮助')} href={getHelpUrl('worksheet', 'indexAcceleration')} />
               </p>
             </div>
             <span

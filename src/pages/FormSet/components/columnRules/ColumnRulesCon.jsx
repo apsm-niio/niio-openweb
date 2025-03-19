@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Icon, Support, Button, ScrollView, SortableList } from 'ming-ui';
@@ -115,7 +116,7 @@ class ColumnRulesCon extends React.Component {
                 ? _l('交互规则可以根据条件实时控制指定字段的显隐、是否可编辑、是否必填等属性。')
                 : _l('验证规则可以规范数据的录入。当满足条件时，禁止保存记录并对指定字段提示错误。')}
             </span>
-            <Support type={3} text={_l('帮助')} href="https://help.mingdao.com/worksheet/business-rule" />
+            <Support type={3} text={_l('帮助')} href={getHelpUrl('worksheet', 'businessRule')} />
           </div>
         </div>
 

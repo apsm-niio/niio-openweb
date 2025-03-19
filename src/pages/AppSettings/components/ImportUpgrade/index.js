@@ -4,6 +4,7 @@ import EmptyStatus from '../EmptyStatus';
 import UpgradeProcess from './components/UpgradeProcess';
 import AppSettingHeader from '../AppSettingHeader';
 import { getFeatureStatus, buriedUpgradeVersionDialog, dateConvertToUserZone } from 'src/util';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { VersionProductType } from 'src/util/enum';
 import appManagementAjax from 'src/api/appManagement';
 import _ from 'lodash';
@@ -84,7 +85,7 @@ export default class AppImportUpgrade extends Component {
           title={_l('导入升级')}
           addBtnName={_l('导入升级')}
           description={_l('导入单个应用文件，实现对当前应用快速升级，升级中的应用将为不可用状态')}
-          link="https://help.mingdao.com/application/upgrade"
+          link={getHelpUrl('application', 'upgrade')}
           handleAdd={this.clickImportUpgrade}
         />
         {!loading && !_.isEmpty(logList) ? (
