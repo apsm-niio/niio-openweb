@@ -1,6 +1,7 @@
 import { VersionProductType } from 'src/util/enum';
 import viewPluginApi from 'src/api/plugin';
 import workflowPluginApi from 'src/pages/workflow/api/Plugin';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 export const sideNavList = [
   {
@@ -93,7 +94,7 @@ export const pluginConstants = {
   view: {
     headerTitle: _l('视图插件'),
     headerDescription: _l('制作和管理视图插件，自由扩展工作表视图功能'),
-    supportLink: 'https://help.mingdao.com/extensions/developer/view',
+    supportLink: getHelpUrl('extensions', 'developerView'),
     myTabText: _l('我开发的'),
     publishDescription: _l('选择已提交的代码进行发布。发布后，组织内的所有应用均可安装使用该代码插件。'),
     usageColumn2: _l('工作表'),
@@ -102,7 +103,7 @@ export const pluginConstants = {
   workflow: {
     headerTitle: _l('工作流节点插件'),
     headerDescription: _l('将代码处理步骤封装为工作流节点，可以在组织内使用或跨组织交换'),
-    supportLink: 'https://help.mingdao.com/extensions/developer/view',
+    supportLink: getHelpUrl('extensions', 'developerView'),
     myTabText: _l('我创建的'),
     publishDescription: _l(
       '发布后，该插件将在组织内正式生效，所有成员均可使用。已安装的旧版本插件将自动替换为当前版本。',

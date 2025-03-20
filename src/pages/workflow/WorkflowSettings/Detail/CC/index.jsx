@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import flowNode from '../../../api/flowNode';
 import { ScrollView, LoadDiv, Dropdown, Checkbox, Support } from 'ming-ui';
+import { getHelpUrl } from 'src/common/helpUrls';
 import cx from 'classnames';
 import {
   SelectUserDropDown,
@@ -355,7 +356,7 @@ export default class CC extends Component {
                     type={3}
                     text={_l('帮助')}
                     className="ThemeColor3 ThemeHoverColor2"
-                    href="https://help.mingdao.com/workflow/node-cc-send-internal-notification"
+                    href={getHelpUrl('workflow', 'nodeCcSendInternalNotification')}
                   />
                 </div>
                 {data.selectNodeId ? (

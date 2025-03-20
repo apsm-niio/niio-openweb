@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { ScrollView, LoadDiv, Dialog, Dropdown, Switch, Support } from 'ming-ui';
+import { getHelpUrl } from 'src/common/helpUrls';
 import flowNode from '../../../api/flowNode';
 import { DetailHeader, DetailFooter, CustomTextarea, TestParameter, JSONAnalysis, OutputList } from '../components';
 import { ACTION_ID } from '../../enum';
@@ -196,7 +197,7 @@ export default class AIGC extends Component {
               (_.find(data.appList, o => o.id === data.appId) || {}).entityName || '',
             )}
             {!md.global.Config.IsPlatformLocal && (
-              <Support type={3} text={_l('扣费说明')} href="https://help.mingdao.com/purchase/billing-items" />
+              <Support type={3} text={_l('扣费说明')} href={getHelpUrl('purchase', 'billingItems')} />
             )}
           </div>
         )}

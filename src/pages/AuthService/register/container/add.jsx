@@ -5,6 +5,7 @@ import RegisterController from 'src/api/register';
 import { captcha } from 'ming-ui/functions';
 import { Support } from 'ming-ui';
 import { mdAppResponse } from 'src/util';
+import { getHelpUrl } from 'src/common/helpUrls';
 import styled from 'styled-components';
 
 const Wrap = styled.div`
@@ -159,7 +160,7 @@ export default function (props) {
       {renderCon()}
       <Support
         type={3}
-        href="https://help.mingdao.com/org/id"
+        href={getHelpUrl('org', 'id')}
         text={_l('没有组织门牌号？')}
         className="mTop16 InlineBlock"
       />

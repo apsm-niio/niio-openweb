@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Support, Icon, Dropdown, Switch, LoadDiv, Button, Tooltip } from 'ming-ui';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { Select } from 'antd';
 import { redefineComplexControl } from 'src/pages/worksheet/common/WorkSheetFilter/util';
 import { filterData } from 'src/pages/FormSet/components/columnRules/config.js';
@@ -500,7 +501,7 @@ export default class PayConfig extends Component {
           <h1>{_l('支付')}</h1>
           <div className="Gray_9e mTop10">
             {_l('注：修改支付相关配置，可能影响已经支付订单，请谨慎操作')}
-            <Support type={3} text={_l('帮助')} href="https://help.mingdao.com/org/payment" />
+            <Support type={3} text={_l('帮助')} href={getHelpUrl('org', 'payment')} />
           </div>
           <div className="payConfigContent">
             <ul className="enableScene">

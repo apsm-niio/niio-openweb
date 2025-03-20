@@ -18,6 +18,7 @@ import {
   UserHead,
   MdLink,
 } from 'ming-ui';
+import { getHelpUrl } from 'src/common/helpUrls';
 import qs from 'query-string';
 import { navigateTo } from 'router/navigateTo';
 import cx from 'classnames';
@@ -372,8 +373,8 @@ class AppWorkflowList extends Component {
           className="pointer Gray_75 mRight15"
           href={
             type === FLOW_TYPE.PBC
-              ? 'https://help.mingdao.com/workflow/pbp'
-              : 'https://help.mingdao.com/workflow/create'
+              ? getHelpUrl('workflow', 'pbp')
+              : getHelpUrl('workflow', 'create')
           }
           type={2}
           text={_l('使用帮助')}
@@ -1103,7 +1104,7 @@ class AppWorkflowList extends Component {
             </Button>
             <Support
               className="pointer Gray_75 flowSupport"
-              href="https://help.mingdao.com/workflow/create"
+              href={getHelpUrl('workflow', 'create')}
               type={3}
               text={_l('了解更多')}
             />
