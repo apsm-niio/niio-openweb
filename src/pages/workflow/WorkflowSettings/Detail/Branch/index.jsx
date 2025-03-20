@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Dialog, Support } from 'ming-ui';
 import { TriggerCondition } from '../components';
 import flowNode from '../../../api/flowNode';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { checkConditionsIsNull } from '../../utils';
 import cx from 'classnames';
 import { Tooltip } from 'antd';
@@ -108,7 +109,7 @@ export default class Branch extends Component {
               <Support
                 type={1}
                 className="workflowDialogSupport"
-                href="https://help.mingdao.com/worksheet/field-filter"
+                href={getHelpUrl('workflow', 'fieldFilter')}
               />
             </span>
             <span className="flex" />

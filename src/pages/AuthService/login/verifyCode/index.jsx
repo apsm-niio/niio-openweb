@@ -8,6 +8,7 @@ import { captcha } from 'ming-ui/functions';
 import loginController from 'src/api/login';
 import { browserIsMobile, encrypt, getRequest } from 'src/util';
 import { removePssId } from 'src/util/pssId';
+import { getHelpUrl } from 'src/common/helpUrls';
 import { CodeTypeEnum } from '../../config.js';
 import { isTel } from '../../util.js';
 import { Wrap } from '../style.jsx';
@@ -308,7 +309,7 @@ export default function (props) {
             <Support
               className="ThemeColor3 Hand mLeft3"
               type={3}
-              href={'https://help.mingdao.com/faq/sms-emali-service-failure'}
+              href={getHelpUrl('faq', 'smsEmaliServiceFailure')}
               text={_l('查看帮助')}
             />
           </div>

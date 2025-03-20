@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { ScrollView, Dropdown, Checkbox, LoadDiv, Radio, Icon, Tooltip, Support } from 'ming-ui';
 import flowNode from '../../../api/flowNode';
 import _ from 'lodash';
+import { getHelpUrl } from 'src/common/helpUrls';
 import {
   SelectUserDropDown,
   Member,
@@ -1334,7 +1335,7 @@ export default class Approval extends Component {
                       type={3}
                       text={_l('帮助')}
                       className="ThemeColor3 ThemeHoverColor2"
-                      href="https://help.mingdao.com/workflow/node-approve#field"
+                      href={getHelpUrl('workflow', 'nodeApprove', 'field')}
                     />
                   </div>
 

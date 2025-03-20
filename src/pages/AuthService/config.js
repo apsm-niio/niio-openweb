@@ -1,8 +1,8 @@
 import React from 'react';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 export const SupportFindVerifyCodeUrl = () => {
-  const href = 'https://help.mingdao.com/faq/sms-emali-service-failure';
-  return md.global.Config.HelpUrl ? href.replace('https://help.mingdao.com', md.global.Config.HelpUrl) : href;
+  return getHelpUrl('faq', 'smsEmaliServiceFailure');
 };
 
 export const InviteFromType = {

@@ -4,6 +4,7 @@ import moment from 'moment';
 import styled from 'styled-components';
 import activityAJAX from '../../../api/activity';
 import _ from 'lodash';
+import { getHelpUrl } from 'src/common/helpUrls';
 import emptyListPng from '../images/emptyList.png';
 
 const DialogWarp = styled(Dialog)`
@@ -100,7 +101,7 @@ export default ({ processId, onClose = () => {} }) => {
           type={3}
           text={_l('了解更多')}
           className="ThemeColor3 ThemeHoverColor2 mLeft5"
-          href="https://help.mingdao.com/workflow/configuration#operation-mode"
+          href={getHelpUrl('workflow', 'configuration', 'operation-mode')}
         />
         <div className="flex" />
         <div className="ThemeHoverColor3 pointer" onClick={() => removePendingProcess()}>

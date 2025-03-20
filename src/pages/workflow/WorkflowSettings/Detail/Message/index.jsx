@@ -3,6 +3,7 @@ import _ from 'lodash';
 import cx from 'classnames';
 import { ScrollView, Menu, Radio, MenuItem, LoadDiv, TagTextarea, Tooltip, Support } from 'ming-ui';
 import flowNode from '../../../api/flowNode';
+import { getHelpUrl } from 'src/common/helpUrls';
 import {
   Member,
   SelectUserDropDown,
@@ -178,7 +179,7 @@ export default class Message extends Component {
             </span>
             <Support
               type={3}
-              href="https://help.mingdao.com/workflow/sms-failure"
+              href={getHelpUrl('workflow', 'smsFailure')}
               text={<span className="ThemeColor3 ThemeHoverColor2">{_l('收不到短信？')}</span>}
             />
           </div>

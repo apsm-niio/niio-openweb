@@ -1497,7 +1497,7 @@ export default class CreateNodeDialog extends Component {
               className="mLeft5"
               type={1}
               title={_l('了解这些动作')}
-              href="https://help.mingdao.com/workflow/introduction"
+              href={getHelpUrl('workflow', 'introduction')}
             />
           </div>
 

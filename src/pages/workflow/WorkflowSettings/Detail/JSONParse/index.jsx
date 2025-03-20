@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { ScrollView, LoadDiv, Dialog, Support, Icon, Menu, MenuItem, Radio } from 'ming-ui';
 import flowNode from '../../../api/flowNode';
+import { getHelpUrl } from 'src/common/helpUrls';
 import {
   DetailHeader,
   DetailFooter,
@@ -500,7 +501,7 @@ export default class JSONParse extends Component {
           <Support
             type={3}
             className="workflowDialogSupport"
-            href="https://help.mingdao.com/workflow/node-json-parsing"
+            href={getHelpUrl('workflow', 'nodeJsonParsing')}
             text={_l('了解 JSON Path')}
           />
         </span>

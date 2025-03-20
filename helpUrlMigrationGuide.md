@@ -43,29 +43,6 @@ href={getHelpUrl('worksheet', 'select')}
 // Add this path to helpUrls.js and then use getHelpUrl()
 ```
 
-### src/pages/workflow/WorkflowSettings/Detail/JSONParse/index.jsx
-
-```javascript
-// Original: "https://help.mingdao.com/workflow/node-json-parsing"
-// No mapping found for path: /workflow/node-json-parsing
-// Add this path to helpUrls.js and then use getHelpUrl()
-```
-
-### src/pages/workflow/WorkflowSettings/Detail/Message/index.jsx
-
-```javascript
-// Original: "https://help.mingdao.com/workflow/sms-failure"
-// No mapping found for path: /workflow/sms-failure
-// Add this path to helpUrls.js and then use getHelpUrl()
-```
-
-### src/pages/workflow/WorkflowSettings/Detail/Write/index.jsx
-
-```javascript
-// Original: "https://help.mingdao.com/workflow/node-approve#field"
-// Replace with: getHelpUrl('workflow', 'nodeApprove')
-```
-
 ### src/pages/workflow/WorkflowSettings/Detail/AIGC/index.jsx
 
 ```javascript
@@ -74,41 +51,11 @@ href={getHelpUrl('worksheet', 'select')}
 // Add this path to helpUrls.js and then use getHelpUrl()
 ```
 
-### src/pages/workflow/WorkflowSettings/Detail/Approval/index.jsx
-
-```javascript
-// Original: "https://help.mingdao.com/workflow/node-approve#field"
-// Replace with: getHelpUrl('workflow', 'nodeApprove')
-```
-
 ### src/pages/workflow/WorkflowSettings/Detail/CC/index.jsx
 
 ```javascript
 // Original: "https://help.mingdao.com/workflow/node-cc-send-internal-notification"
 // No mapping found for path: /workflow/node-cc-send-internal-notification
-// Add this path to helpUrls.js and then use getHelpUrl()
-```
-
-### src/pages/workflow/WorkflowSettings/Detail/Branch/index.jsx
-
-```javascript
-// Original: "https://help.mingdao.com/worksheet/field-filter"
-// Replace with: getHelpUrl('workflow', 'fieldFilter')
-```
-
-### src/pages/workflow/WorkflowSettings/EditFlow/components/CreateNodeDialog.jsx
-
-```javascript
-// Original: "https://help.mingdao.com/workflow/introduction"
-// No mapping found for path: /workflow/introduction
-// Add this path to helpUrls.js and then use getHelpUrl()
-```
-
-### src/pages/workflow/WorkflowSettings/History/components/SerialProcessDialog.jsx
-
-```javascript
-// Original: "https://help.mingdao.com/workflow/configuration#operation-mode"
-// No mapping found for path: /workflow/configuration#operation-mode
 // Add this path to helpUrls.js and then use getHelpUrl()
 ```
 
@@ -216,28 +163,6 @@ href={getHelpUrl('worksheet', 'select')}
 ```javascript
 // Original: "https://help.mingdao.com/org/payment"
 // No mapping found for path: /org/payment
-// Add this path to helpUrls.js and then use getHelpUrl()
-```
-
-### src/pages/AuthService/login/verifyCode/index.jsx
-
-```javascript
-// Original: 'https://help.mingdao.com/faq/sms-emali-service-failure'
-// No mapping found for path: /faq/sms-emali-service-failure
-// Add this path to helpUrls.js and then use getHelpUrl()
-```
-
-### src/pages/AuthService/config.js
-
-```javascript
-// Original: 'https://help.mingdao.com/faq/sms-emali-service-failure'
-// No mapping found for path: /faq/sms-emali-service-failure
-// Add this path to helpUrls.js and then use getHelpUrl()
-```
-
-```javascript
-// Original: 'https://help.mingdao.com'
-// No mapping found for path: /
 // Add this path to helpUrls.js and then use getHelpUrl()
 ```
 
