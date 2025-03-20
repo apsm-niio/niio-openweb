@@ -62,7 +62,7 @@ export const EditExternalLink = (props) => {
 
   const handleSave = () => {
     const { currentPcNaviStyle } = store.getState().appPkg;
-    const protocolReg = /^https?:\/\/.+$/;
+    const protocolReg = data.configuration.openType === '1' ? /^https:\/\/.+$/ : /^https?:\/\/.+$/;
     if (!protocolReg.test(data.urlTemplate)) {
       alert(_l('请输入正确的url'), 3);
       return;
@@ -215,7 +215,12 @@ const ExternalLink = props => {
                 {
                   value: '1',
                   text: _l('嵌入页面'),
-                  disableTitle: true
+                  disableTitle: true,
+                  children: (
+                    <div className="pointer mLeft5" data-tip={_l('嵌入页面时只支持 https:// 开头的链接')} style={{ top: 2 }}>
+                      <Icon className="Font18 Gray_9e" icon="info" />
+                    </div>
+                  )
                 },
                 { value: '2', text: _l('新窗口打开'), disableTitle: true },
               ]}
