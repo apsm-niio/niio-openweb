@@ -11,6 +11,7 @@ import { DATABASE_TYPE, isValidName, namePattern, SYSTEM_FIELD_IDS } from '../..
 import { ALL_OPERATION_TYPE_DATA } from 'src/pages/integration/dataIntegration/TaskCon/TaskCanvas/config';
 import { useState } from 'react';
 import { isNotSupportField } from '../../utils';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const Wrapper = styled.div`
   .headTr,
@@ -481,7 +482,7 @@ export default function FieldMappingList(props) {
                     type={1}
                     title={_l('名称包含特殊字符，无法同步')}
                     className="Gray_bd mLeft5"
-                    href="https://help.mingdao.com/integration/data-integration"
+                    href={getHelpUrl('integration', 'dataIntegration')}
                   />
                 )}
                 {sourceField.isDelete && (
@@ -557,7 +558,7 @@ export default function FieldMappingList(props) {
                     type={1}
                     title={_l('名称包含特殊字符，无法同步')}
                     className="Gray_bd mLeft5"
-                    href="https://help.mingdao.com/integration/data-integration"
+                    href={getHelpUrl('integration', 'dataIntegration')}
                   />
                 )}
                 {sourceField.isDelete && (
@@ -570,7 +571,7 @@ export default function FieldMappingList(props) {
                     type={1}
                     title={_l('暂不支持同步')}
                     className="Gray_bd mLeft5"
-                    href="https://help.mingdao.com/integration/data-integration#field-sync-rule"
+                    href={getHelpUrl('integration', 'dataIntegration')}
                   />
                 )}
               </div>

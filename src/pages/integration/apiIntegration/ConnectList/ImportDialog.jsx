@@ -10,6 +10,7 @@ import { Progress } from 'antd';
 import cx from 'classnames';
 import AppManagementAjax from 'src/pages/workflow/api/ApiManagement.js';
 import { UPGRADE_ERRORMSG } from 'src/pages/AppSettings/config.js';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const Wrap = styled.div`
   &.importAppContainer {
@@ -311,7 +312,7 @@ export default function ImportDialog(props) {
       <Wrap className="importAppContainer">
         <div className="mBottom24">
           <span className="Gray_75">{_l('导入连接配置文件，生成一个新的连接')}</span>
-          <Support text={_l('帮助')} type={3} href="https://help.mingdao.com/application/import-export" />
+          <Support text={_l('帮助')} type={3} href={getHelpUrl('product', 'appImportExport')} />
         </div>
         {renderStepContent()}
         {file.name && upgradeId && (

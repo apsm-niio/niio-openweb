@@ -14,6 +14,7 @@ import _ from 'lodash';
 import { ROLE_TYPE } from '../constant';
 import './style.less';
 import { upgradeVersionDialog, getCurrentProject } from 'src/util';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const ConnectorWrapper = styled.div`
   background: #fff;
@@ -260,7 +261,7 @@ function Connector(props) {
             <h3 className="Bold Font24">{_l('创建连接器')}</h3>
             <p className="Font15 flexRow alignItemsCenter">
               {_l('连接到外部数据源进行数据实时同步')}{' '}
-              <Support type={3} href="https://help.mingdao.com/integration/data-integration" text={_l('使用帮助')} />
+              <Support type={3} href={getHelpUrl('integration', 'dataIntegration')} text={_l('使用帮助')} />
             </p>
           </div>
         </div>

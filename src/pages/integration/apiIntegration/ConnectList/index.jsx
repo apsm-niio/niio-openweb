@@ -18,6 +18,7 @@ import { PERMISSION_ENUM } from 'src/pages/Admin/enum';
 import { MenuItemWrap } from 'src/pages/integration/apiIntegration/style.js';
 import ImportDialog from './ImportDialog';
 import Trigger from 'rc-trigger';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const TABLIST = [
   { tab: 1, txt: _l('自定义') },
@@ -404,7 +405,7 @@ function Con(props) {
               {_l('连接第三方 API 并保存鉴权认证，在工作表或工作流中调用')}
               <Support
                 type={3}
-                href="https://help.mingdao.com/integration/api#connection-certification"
+                href={getHelpUrl('integration', 'api')}
                 text={_l('使用帮助')}
               />
             </p>

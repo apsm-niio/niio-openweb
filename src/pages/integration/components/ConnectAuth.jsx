@@ -7,6 +7,7 @@ import { CardTopWrap } from '../apiIntegration/style';
 import Detail from 'src/pages/workflow/WorkflowSettings/Detail';
 import flowNodeAjax from 'src/pages/workflow/api/flowNode';
 import { TYPELIST } from 'src/pages/integration/config';
+import { getHelpUrl } from 'src/common/helpUrls';
 const Wrap = styled.div`
   p {
     margin: 0;
@@ -268,11 +269,7 @@ function ConnectAuth(props) {
           <p className="Font13 Gray_75 mTop4">
             <span className="TxtMiddle">{_l('配置发送 API 请求时采用的鉴权认证方式')}</span>
             <Support
-              href={
-                node.appType === 31
-                  ? 'https://help.mingdao.com/integration/api#basic-auth'
-                  : 'https://help.mingdao.com/integration/api#oauth'
-              }
+              href={getHelpUrl('integration', 'api')}
               type={3}
               text={_l('使用帮助')}
             />

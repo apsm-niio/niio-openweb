@@ -6,6 +6,7 @@ import { VersionProductType } from 'src/util/enum';
 import { WrapBtn } from 'src/pages/integration/apiIntegration/style.js';
 import Item from 'src/pages/integration/apiIntegration/APIWrap/Item.jsx';
 import { Wrap } from './style';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 function AddNode(props) {
   const featureType = getFeatureStatus(localStorage.getItem('currentProjectId'), VersionProductType.codeBlockNode);
@@ -79,7 +80,7 @@ function ConnectItem(props) {
         canEdit={props.canEdit}
         title={_l('代码块')}
         icon={'worksheet_API'}
-        support={'https://help.mingdao.com/integration/api#enter-parameters'}
+        support={getHelpUrl('integration', 'api')}
       />
     </Wrap>
   );

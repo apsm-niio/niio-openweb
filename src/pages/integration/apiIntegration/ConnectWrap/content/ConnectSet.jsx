@@ -9,6 +9,7 @@ import ConnectItem from 'src/pages/integration/components/ConnectItem';
 import { LoadDiv, Icon } from 'ming-ui';
 import EditIntro from 'src/pages/integration/components/EditDes';
 import { getNodeList } from '../util';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const Wrap = styled.div`
   .descContainer {
@@ -207,7 +208,7 @@ function ConnectSet(props) {
           {...props}
           id={props.id}
           node={data}
-          href={'https://help.mingdao.com/integration/api#enter-parameters'}
+          href={getHelpUrl('integration', 'api')}
           index={index}
           connectType={props.connectType}
           onChange={v => {

@@ -4,6 +4,7 @@ import { Support, Icon } from 'ming-ui';
 import _ from 'lodash';
 import { AddOrEditSource, SourceList } from './components';
 import SourceSelectModal from '../components/SourceSelectModal';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const DataSourceWrapper = styled.div`
   background: #fff;
@@ -44,7 +45,7 @@ export default function DataSource(props) {
           <h3 className="Bold Font24">{_l('数据源')}</h3>
           <p className="Font15 mBottom0 flexRow alignItemsCenter">
             {_l('管理外部数据源和目的地')}
-            <Support type={3} href="https://help.mingdao.com/integration/data-integration" text={_l('使用帮助')} />
+            <Support type={3} href={getHelpUrl('integration', 'dataIntegration')} text={_l('使用帮助')} />
           </p>
         </div>
         <div className="addSourceButton" onClick={() => setSelectModalVisible(true)}>

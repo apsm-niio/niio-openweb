@@ -12,6 +12,7 @@ import importDisabledImg from 'src/pages/Admin/app/appManagement/img/import_disa
 import importActiveImg from 'src/pages/Admin/app/appManagement/img/import_active.png';
 import { UPGRADE_ERRORMSG } from 'src/pages/AppSettings/config.js';
 import AppManagementAjax from 'src/pages/workflow/api/ApiManagement.js';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const Wrap = styled.div`
   width: 100%;
@@ -219,7 +220,7 @@ export default function Upgrade(props) {
       <Fragment>
         <div className="Gray_75 mBottom20">
           {_l('导入 API 配置文件，实现对当前 API 的快速升级，升级过程中不影响原有API正常使用。')}
-          <Support text={_l('帮助')} type={3} href="https://help.mingdao.com/application/upgrade" />
+          <Support text={_l('帮助')} type={3} href={getHelpUrl('application', 'upgrade')} />
         </div>
         <div className="uploadWrap flex">
           <Fragment>
@@ -350,7 +351,7 @@ export default function Upgrade(props) {
             <span className="Font18 Bold mLeft10">{_l('导入升级')}</span>
           </div>
           <div className="Gray_9d Font14 mRight24">
-            <Support title={_l('帮助')} type={1} href="https://help.mingdao.com/application/upgrade" />
+            <Support title={_l('帮助')} type={1} href={getHelpUrl('application', 'upgrade')} />
           </div>
         </div>
         <div className={cx('upgradeProcessContent')}>

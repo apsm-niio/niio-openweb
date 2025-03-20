@@ -7,6 +7,7 @@ import CreateDialog from './components/CreateDialog.jsx';
 import { useSetState } from 'react-use';
 import { VersionProductType } from 'src/util/enum';
 import { getFeatureStatus, buriedUpgradeVersionDialog } from 'src/util';
+import { getHelpUrl } from 'src/common/helpUrls';
 
 const Wrap = styled.div`
   background: #fff;
@@ -86,7 +87,7 @@ export default function DataMirror(props) {
               <h3 className="Bold Font24 mBottom0">{_l('工作表数据镜像')}</h3>
               <p className="Font15 mBottom0 flexRow alignItemsCenter mTop10">
                 {_l('在外部数据库中创建工作表数据的镜像，并保持同步')}
-                <Support type={3} href="https://help.mingdao.com/integration/data-integration" text={_l('使用帮助')} />
+                <Support type={3} href={getHelpUrl('integration', 'dataIntegration')} text={_l('使用帮助')} />
               </p>
             </div>
             <div className="addTaskButton" onClick={() => setState({ show: true })}>
