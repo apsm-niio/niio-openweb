@@ -219,11 +219,25 @@ href={getHelpUrl('worksheet', 'select')}
 // Add this path to helpUrls.js and then use getHelpUrl()
 ```
 
+### src/pages/AuthService/login/verifyCode/index.jsx
+
+```javascript
+// Original: 'https://help.mingdao.com/faq/sms-emali-service-failure'
+// No mapping found for path: /faq/sms-emali-service-failure
+// Add this path to helpUrls.js and then use getHelpUrl()
+```
+
 ### src/pages/AuthService/config.js
 
 ```javascript
 // Original: 'https://help.mingdao.com/faq/sms-emali-service-failure'
 // No mapping found for path: /faq/sms-emali-service-failure
+// Add this path to helpUrls.js and then use getHelpUrl()
+```
+
+```javascript
+// Original: 'https://help.mingdao.com'
+// No mapping found for path: /
 // Add this path to helpUrls.js and then use getHelpUrl()
 ```
 
